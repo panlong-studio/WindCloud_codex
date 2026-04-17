@@ -1,0 +1,53 @@
+[2026-04-17 19:09:52] [INFO] [src/server/main.c:main:134] server start, ip=127.0.0.1 port=12345 thread_num=4
+[2026-04-17 19:11:56] [INFO] [src/server/main.c:server_main_loop:109] client connected: 127.0.0.1:44990
+[2026-04-17 19:11:56] [INFO] [src/server/worker.c:thread_worker:26] worker start handle client_fd=5
+[2026-04-17 19:11:56] [INFO] [src/server/handle.c:handle_request:73] client_fd=5 cmd=login arg=alice
+[2026-04-17 19:11:56] [INFO] [src/server/handle.c:handle_login:147] login success, user=alice
+[2026-04-17 19:11:56] [INFO] [src/server/handle.c:handle_request:71] user=alice cmd=pwd arg=
+[2026-04-17 19:11:56] [INFO] [src/server/handle.c:handle_request:71] user=alice cmd=ls arg=
+[2026-04-17 19:11:56] [INFO] [src/server/handle.c:handle_request:71] user=alice cmd=mkdir arg=dir1
+[2026-04-17 19:11:56] [INFO] [src/server/handle.c:handle_mkdir:249] user=alice mkdir=dir1
+[2026-04-17 19:11:56] [INFO] [src/server/handle.c:handle_request:71] user=alice cmd=cd arg=dir1
+[2026-04-17 19:11:56] [INFO] [src/server/handle.c:handle_request:71] user=alice cmd=pwd arg=
+[2026-04-17 19:11:56] [INFO] [src/server/handle.c:handle_request:71] user=alice cmd=puts arg=test.txt
+[2026-04-17 19:11:57] [INFO] [src/server/handle.c:handle_puts:311] user=alice upload success, file=test.txt
+[2026-04-17 19:11:57] [INFO] [src/server/handle.c:handle_request:71] user=alice cmd=ls arg=
+[2026-04-17 19:11:57] [INFO] [src/server/handle.c:handle_request:71] user=alice cmd=gets arg=test.txt
+[2026-04-17 19:11:57] [INFO] [src/server/handle.c:handle_gets:345] user=alice download success, file=test.txt
+[2026-04-17 19:11:57] [INFO] [src/server/handle.c:handle_request:71] user=alice cmd=rm arg=test.txt
+[2026-04-17 19:11:57] [INFO] [src/server/handle.c:handle_rm:282] user=alice rm=test.txt
+[2026-04-17 19:11:57] [INFO] [src/server/handle.c:handle_request:71] user=alice cmd=ls arg=
+[2026-04-17 19:11:57] [INFO] [src/server/handle.c:handle_request:71] user=alice cmd=quit arg=
+[2026-04-17 19:11:57] [INFO] [src/server/worker.c:thread_worker:29] worker finish client_fd=5
+[2026-04-17 19:12:15] [INFO] [src/server/main.c:server_main_loop:109] client connected: 127.0.0.1:45134
+[2026-04-17 19:12:15] [INFO] [src/server/worker.c:thread_worker:26] worker start handle client_fd=6
+[2026-04-17 19:12:15] [INFO] [src/server/handle.c:handle_request:73] client_fd=6 cmd=login arg=nobody
+[2026-04-17 19:12:15] [ERROR] [src/server/handle.c:handle_login:143] login failed, user=nobody
+[2026-04-17 19:12:15] [INFO] [src/server/handle.c:handle_request:57] client_fd=6 disconnected before login
+[2026-04-17 19:12:15] [INFO] [src/server/worker.c:thread_worker:29] worker finish client_fd=6
+[2026-04-17 19:12:17] [INFO] [src/server/main.c:server_main_loop:109] client connected: 127.0.0.1:45136
+[2026-04-17 19:12:17] [INFO] [src/server/worker.c:thread_worker:26] worker start handle client_fd=5
+[2026-04-17 19:12:17] [INFO] [src/server/handle.c:handle_request:73] client_fd=5 cmd=login arg=alice
+[2026-04-17 19:12:17] [INFO] [src/server/handle.c:handle_login:147] login success, user=alice
+[2026-04-17 19:12:17] [INFO] [src/server/handle.c:handle_request:71] user=alice cmd=gets arg=missing.txt
+[2026-04-17 19:12:17] [INFO] [src/server/handle.c:handle_request:71] user=alice cmd=quit arg=
+[2026-04-17 19:12:17] [INFO] [src/server/worker.c:thread_worker:29] worker finish client_fd=5
+[2026-04-17 19:12:26] [INFO] [src/server/main.c:main:145] server stop
+[2026-04-17 19:15:10] [INFO] [src/server/main.c:main:140] server start, ip=127.0.0.1 port=12345 thread_num=4
+[2026-04-17 19:16:13] [INFO] [src/server/main.c:server_main_loop:109] client connected: 127.0.0.1:48184
+[2026-04-17 19:16:13] [INFO] [src/server/worker.c:thread_worker:32] worker start handle client_fd=5
+[2026-04-17 19:16:13] [INFO] [src/server/handle.c:handle_request:79] client_fd=5 cmd=login arg=alice
+[2026-04-17 19:16:13] [INFO] [src/server/handle.c:handle_login:161] login success, user=alice
+[2026-04-17 19:16:13] [INFO] [src/server/handle.c:handle_request:77] user=alice cmd=pwd arg=
+[2026-04-17 19:16:13] [INFO] [src/server/handle.c:handle_request:77] user=alice cmd=mkdir arg=smoke_dir
+[2026-04-17 19:16:13] [INFO] [src/server/handle.c:handle_mkdir:291] user=alice mkdir=smoke_dir
+[2026-04-17 19:16:13] [INFO] [src/server/handle.c:handle_request:77] user=alice cmd=cd arg=smoke_dir
+[2026-04-17 19:16:13] [INFO] [src/server/handle.c:handle_request:77] user=alice cmd=puts arg=smoke.txt
+[2026-04-17 19:16:13] [INFO] [src/server/handle.c:handle_puts:369] user=alice upload success, file=smoke.txt
+[2026-04-17 19:16:13] [INFO] [src/server/handle.c:handle_request:77] user=alice cmd=gets arg=smoke.txt
+[2026-04-17 19:16:13] [INFO] [src/server/handle.c:handle_gets:411] user=alice download success, file=smoke.txt
+[2026-04-17 19:16:13] [INFO] [src/server/handle.c:handle_request:77] user=alice cmd=rm arg=smoke.txt
+[2026-04-17 19:16:13] [INFO] [src/server/handle.c:handle_rm:332] user=alice rm=smoke.txt
+[2026-04-17 19:16:13] [INFO] [src/server/handle.c:handle_request:77] user=alice cmd=quit arg=
+[2026-04-17 19:16:13] [INFO] [src/server/worker.c:thread_worker:35] worker finish client_fd=5
+[2026-04-17 19:16:21] [INFO] [src/server/main.c:main:151] server stop
